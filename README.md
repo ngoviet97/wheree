@@ -74,7 +74,28 @@ They offer 50.000 requests for free every months on Reverse Geocoding Api Packag
 1. Data transaction flows:
 ![Screenshot 2023-12-20 at 14 50 44](https://github.com/ngoviet97/wheree/assets/46282671/18ffe94a-d9bb-4619-a2ab-ceb8b04f4c7d)
 
-Before executing, URLs filtered by rating and number of reviews.
+Before executing, URLs filtered by rating and number of reviews. Then, if the URL is qualified, extract chosen data type to create a main data file:
+- name: Brand name
+- phone_number: Brand's phone number
+- status: Opening status
+- embled_url: embled url for the map
+- service_elements: Service elements which the brand provides
+- address: Address of the brand
+- price_lv: price level
+- brand_type: type of the brand
+- map_url: the Google Map's URL of the brand
+
+From the map_url, extract Latitude and Longitude of the brand as format: xx.xxxxxxx,xx.xxxxxxx
+- latitude: a coordinate that specifies the north–south position
+- longitude: Longitude is a geographic coordinate that specifies the east–west position
+
+
+2. Reverse locations to particular levels:
+- level0: zipcode or postcode of the location
+- level1: The country name of the brand
+- level2: The county name of the brand
+- level3: The city name of the brand
+- level4: The district of the brand
 
 ## License:
 
