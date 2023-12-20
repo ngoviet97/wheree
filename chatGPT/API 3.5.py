@@ -3,8 +3,8 @@ import pandas as pd
 import csv
 import random
 
-inputCSV = '/Users/MAC/Documents/WEBIFY/Lọc Hình ảnh/Translate/Expedia/ExpediaTrans.csv'
-outputCSV = '/Users/MAC/Documents/WEBIFY/Lọc Hình ảnh/Translate/Expedia/mainContent.csv'
+inputCSV = '~/path/csvfiles/inputsample.csv'
+outputCSV = '~/path/output.csv'
 
 df = pd.read_csv(inputCSV)
 print(df.columns)
