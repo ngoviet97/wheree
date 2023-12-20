@@ -2,6 +2,7 @@ from PIL import Image
 import pytesseract
 
 # Path to the Tesseract executable (update with your path)
+# Use the command on terminal to find the path (only works for mac): which tesseract
 pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract'
 
 # Path to the image file
