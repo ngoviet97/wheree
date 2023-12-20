@@ -5,8 +5,8 @@ import csv
 import random
 
 # Read the CSV file into a DataFrame
-df = pd.read_csv('/Users/MAC/Documents/WEBIFY/Lọc Hình ảnh/Manage/brandinfo_with_coordinates.csv')
-fileout = '/Users/MAC/Documents/WEBIFY/Lọc Hình ảnh/Manage/locations1.csv'
+df = pd.read_csv('~/path/samplefile/inputsample.csv')
+fileout = '~/path/output.csv'
 
 output_directory = os.path.dirname(fileout)
 if not os.path.exists(output_directory):
@@ -29,27 +29,7 @@ if os.path.exists(fileout):
 
 dfOut = pd.read_csv(fileout)
 
-apilist = ['bdc_a3aa745fc7cf407d9fa4c278ef94dbcf',
-'bdc_4c1e8ca868cb4eaeb1db70c84865a41f',
-'bdc_4c1313a90794411eb1030b9393ceb622',
-'bdc_9601a2a7a99843c4bd607b6500609c93',
-'bdc_befb67c9b02642aa9fedd6a16dfc6822',
-'bdc_adada2ca65ac4c4090b95954f8d6211f',
-'bdc_9d6d46b237bc429195164d06a5f4dfd7',
-'bdc_280397da96f84451a121a7932e1fc27c',
-'bdc_35c8024f45834d3790f86f8b37a29b30',
-'bdc_07c4b3329f27494d9d4b81fdd8d3b854',
-'bdc_dc7a27f777694f588632eb0e42cafa8d',
-'bdc_ab2132d51f0e45aa874d0ab054507d2c',
-'bdc_cda872f9bf7c412d82b53bbfb2916779',
-'bdc_5832c7d53aa94fc6a0e8c3249da92a54',
-'bdc_b7fe95a008a6491494cde6a341674750',
-'bdc_cc5fcafd8a104bac8d12f7a009aa90ef',
-'bdc_c5a2764292574d2db2f977956c7481ea',
-'bdc_07427821f00d4bcebd336498f7ce5acb',
-'bdc_63e14e70392945f8a4ec6882ff992ef5',
-'bdc_679295a6fcf145e2b0a2ba2e4b33aafd',
-'bdc_89237b27163349a8893a6b29badf598e']
+apilist = ['bdc_a3aa745fc7cf407d9fa4c278ef94dbcf']
 
 column_a_data = []
 print(df.columns)
@@ -57,8 +37,8 @@ print(df.columns)
 for num in range(0,len(df)):
     row = df.iloc[num]
     column_a_data.append([{'name': row['yelp_link'],
-                           'Latitude': str(row['Latitude']),
-                           'Longitude': str(row['Longitude'])
+                           'Latitude': str(row['latitude']),
+                           'Longitude': str(row['longitude'])
     }])
 
 column_a_data = [row for row in column_a_data if row[0]['name'] not in existing_urls if row[0]['name'] != '' and row[0]['name'] != 'yelp_link']
