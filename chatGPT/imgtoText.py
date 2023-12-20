@@ -6,7 +6,7 @@ import pytesseract
 pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract'
 
 # Path to the image file
-image_path = '/Users/MAC/Downloads/2023-03-05.jpg'
+image_path = '~/path/file.jpg'
 
 # Open the image file
 img = Image.open(image_path)
