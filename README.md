@@ -80,7 +80,7 @@ They offer 50.000 requests for free every months on Reverse Geocoding Api Packag
 ![Screenshot 2023-12-20 at 14 50 44](https://github.com/ngoviet97/wheree/assets/46282671/18ffe94a-d9bb-4619-a2ab-ceb8b04f4c7d)
 
 Before executing, URLs filtered by rating and number of reviews. Then, if the URL is qualified, extract chosen data type to create a main data file:
-- UUID: ID of the brand
+- uuid: ID of the brand
 - name: Brand name
 - phonecode: mobile country code (first 2 numbers of a phone number)
 - phone: the phone number
@@ -102,6 +102,9 @@ From the map_url, extract Latitude and Longitude of the brand as format: xx.xxxx
 - level3: The city name of the brand
 - level4: The district of the brand
 
+****3. Image extraction:
+- banner: The banner of the brand.
+- imgs: Total images of the brand.
 ## License:
 
 wheSCA is licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0.
