@@ -56,3 +56,7 @@ They offer 50.000 requests for free every months on Reverse Geocoding Api Packag
 <img width="1000" alt="Screenshot 2023-12-20 at 11 08 00" src="https://github.com/ngoviet97/wheree/assets/46282671/ee8a826d-21ad-4f3d-9033-f3d2681e59f4">
 
 ## Installation:
+
+## License:
+
+wheSCA is licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0.
