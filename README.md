@@ -11,6 +11,21 @@ For most of the tool, you should read the documentations first at the link.
 ````
 pip install opencv-python
 ````
+- [pytesseract](https://pypi.org/project/pytesseract/): Python-tesseract is an optical character recognition (OCR) tool for python. That is, it will recognize and “read” the text embedded in images. Follow instruction below to install:
+
+1. Install brew: 
+````
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+````
+2. Install Tesseract on Mac:
+````
+brew install tesseract
+````
+3. Install library:
+````
+pip install pytesseract
+pip install Pillow
+````
 
 - [csv](https://docs.python.org/3/library/csv.html): The csv module implements classes to read and write tabular data in CSV format
 ````
