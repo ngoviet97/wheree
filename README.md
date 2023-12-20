@@ -105,6 +105,8 @@ From the map_url, extract Latitude and Longitude of the brand as format: xx.xxxx
 ****3. Image extraction:
 - banner: The banner of the brand.
 - imgs: Total images of the brand.
+- menuimgs: In case of restaurant, menu images is required.
+
 ## License:
 
 wheSCA is licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0.
