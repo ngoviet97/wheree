@@ -10,7 +10,7 @@ df = pd.read_csv(inputCSV)
 print(df.columns)
 
 with open(outputCSV, 'a', newline='', encoding='utf-8') as csv_file:
-    fieldnames = ['yelp_link', 'address', 'main', 'photos','menu']
+    fieldnames = ['uuid', 'main', 'photos','menu']
     csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 
     # Write header only if the file is empty
@@ -20,17 +20,17 @@ with open(outputCSV, 'a', newline='', encoding='utf-8') as csv_file:
 column_a_data = []
 for num in range(0,len(df)):
     row = df.iloc[num]
-    column_a_data.append([{'name': row['original_name'],
-                           'link': row['yelp_link'],
-                           'address': row['address_x'],
+    column_a_data.append([{'name': row['name'],
+                           'uuid': row['uuid'],
+                           'address': row['address'],
                            'brandtype': row['brand_type'],
                            'reviews': row['reviews'],
-                           'openinghours': row['hour_opening'],
-                           'price' : row['price_levels']
+                           'openinghours': row['opening_hours'],
+                           'price' : row['price_lv']
     }])
 
 apiList = []
-file_path = '/Users/MAC/PycharmProjects/GGMaps/chatGPT/8DWG6OXO6X.txt'
+file_path = '~/path/apis.txt'
 with open(file_path, 'r') as file:
     file_contents = file.readlines()
     apiList = file_contents
@@ -99,8 +99,7 @@ for row in column_a_data:
         print(row['link'])
         results = []
         result_entry = {
-            'yelp_link': row['link'],
-            'address': row['name'],
+            'uuid': row['uuid'],
             'main': mainContentResult,
             'photos': photosContentResult,
             'menu': menuContentResult,
@@ -108,14 +107,13 @@ for row in column_a_data:
         }
     except:
         result_entry = {
-            'yelp_link': row['link'],
-            'address': row['name'],
+            'uuid': row['uuid'],
             'main': '',
             'photos': '',
             'menu':''}
 
     results.append(result_entry)
     with open(outputCSV, 'a', newline='', encoding='utf-8') as csv_file:
-        fieldnames = ['yelp_link', 'address', 'main','photos','menu']
+        fieldnames = ['uuid', 'main','photos','menu']
         csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
         csv_writer.writerow(result_entry)
