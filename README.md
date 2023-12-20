@@ -79,7 +79,6 @@ Before executing, URLs filtered by rating and number of reviews. Then, if the UR
 - phone_number: Brand's phone number
 - status: Opening status
 - embled_url: embled url for the map
-- service_elements: Service elements which the brand provides
 - address: Address of the brand
 - price_lv: price level
 - brand_type: type of the brand
