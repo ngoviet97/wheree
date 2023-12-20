@@ -13,7 +13,7 @@ if not os.path.exists(output_directory):
     os.makedirs(output_directory)
 
 with open(fileout, 'a', newline='', encoding='utf-8') as csv_file:
-    fieldnames = ['map_url', 'country', 'county', 'city', 'district']
+    fieldnames = ['uuid', 'country', 'county', 'city', 'district']
     csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 
     # Write header only if the file is empty
@@ -25,7 +25,7 @@ if os.path.exists(fileout):
     with open(fileout, 'r', newline='', encoding='utf-8') as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
-            existing_urls.add(row['map_url'])
+            existing_urls.add(row['uuid'])
 
 dfOut = pd.read_csv(fileout)
 
@@ -41,12 +41,12 @@ print(df.columns)
 
 for num in range(0,len(df)):
     row = df.iloc[num]
-    column_a_data.append([{'name': row['map_url'],
+    column_a_data.append([{'uuid': row['uuid'],
                            'Latitude': str(row['Latitude']),
                            'Longitude': str(row['Longitude'])
     }])
 
-column_a_data = [row for row in column_a_data if row[0]['name'] not in existing_urls if row[0]['name'] != '' and row[0]['name'] != 'map_url']
+column_a_data = [row for row in column_a_data if row[0]['name'] not in existing_urls if row[0]['name'] != '' and row[0]['uuid'] != 'uuid']
 # Iterate over rows
 print(len(column_a_data))
 for row in column_a_data:
@@ -83,7 +83,7 @@ for row in column_a_data:
             district = ''
 
         result_entry = {
-            'map_url': row['name'],
+            'uuid': row['uuid'],
             'country': country,
             'county': county,
             'city': city,
@@ -95,7 +95,7 @@ for row in column_a_data:
 
     else:
         result_entry = {
-            'map_url': row['name'],
+            'uuid': row['uuid'],
             'country': '',
             'county': '',
             'city': '',
@@ -106,6 +106,6 @@ for row in column_a_data:
     results = []
     results.append(result_entry)
     with open(fileout, 'a', newline='', encoding='utf-8') as csv_file:
-        fieldnames = ['map_url', 'country', 'county','city','district']
+        fieldnames = ['uuid', 'country', 'county','city','district']
         csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
         csv_writer.writerow(result_entry)
