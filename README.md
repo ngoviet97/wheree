@@ -26,6 +26,11 @@ brew install tesseract
 pip install pytesseract
 pip install Pillow
 ````
+- [UUID](https://docs.python.org/3/library/uuid.html): This module provides immutable UUID objects (the UUID class) and the functions uuid1(), uuid3(), uuid4(), uuid5() for generating version 1, 3, 4, and 5 UUIDs as specified in RFC 4122.
+````
+pip install uuid
+````
+
 
 - [csv](https://docs.python.org/3/library/csv.html): The csv module implements classes to read and write tabular data in CSV format
 ````
@@ -71,12 +76,14 @@ They offer 50.000 requests for free every months on Reverse Geocoding Api Packag
 <img width="1000" alt="Screenshot 2023-12-20 at 11 08 00" src="https://github.com/ngoviet97/wheree/assets/46282671/ee8a826d-21ad-4f3d-9033-f3d2681e59f4">
 
 ## Installation:
-1. Data transaction flows:
+****1. Data transaction flows:
 ![Screenshot 2023-12-20 at 14 50 44](https://github.com/ngoviet97/wheree/assets/46282671/18ffe94a-d9bb-4619-a2ab-ceb8b04f4c7d)
 
 Before executing, URLs filtered by rating and number of reviews. Then, if the URL is qualified, extract chosen data type to create a main data file:
+- UUID: ID of the brand
 - name: Brand name
-- phone_number: Brand's phone number
+- phonecode: mobile country code (first 2 numbers of a phone number)
+- phone: the phone number
 - status: Opening status
 - embled_url: embled url for the map
 - address: Address of the brand
@@ -88,8 +95,7 @@ From the map_url, extract Latitude and Longitude of the brand as format: xx.xxxx
 - latitude: a coordinate that specifies the north–south position
 - longitude: Longitude is a geographic coordinate that specifies the east–west position
 
-
-2. Reverse locations to particular levels:
+****2. Reverse locations to particular levels:
 - level0: zipcode or postcode of the location
 - level1: The country name of the brand
 - level2: The county name of the brand
