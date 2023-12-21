@@ -13,7 +13,7 @@ if not os.path.exists(output_directory):
     os.makedirs(output_directory)
 
 with open(fileout, 'a', newline='', encoding='utf-8') as csv_file:
-    fieldnames = ['uuid', 'country', 'county', 'city', 'district']
+    fieldnames = ['uuid', 'addresslv1', 'addresslv2', 'addresslv3', 'addresslv4']
     csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 
     # Write header only if the file is empty
@@ -84,10 +84,10 @@ for row in column_a_data:
 
         result_entry = {
             'uuid': row['uuid'],
-            'country': country,
-            'county': county,
-            'city': city,
-            'district': district
+            'addresslv1': country,
+            'addresslv2': county,
+            'addresslv3': city,
+            'addresslv4': district
         }
 
         # Print the extracted information
@@ -96,16 +96,16 @@ for row in column_a_data:
     else:
         result_entry = {
             'uuid': row['uuid'],
-            'country': '',
-            'county': '',
-            'city': '',
-            'district': ''
+            'addresslv1': '',
+            'addresslv2': '',
+            'addresslv3': '',
+            'addresslv4': ''
         }
         print(f"Error: {response.status_code} for row {num + 1}")
 
     results = []
     results.append(result_entry)
     with open(fileout, 'a', newline='', encoding='utf-8') as csv_file:
-        fieldnames = ['uuid', 'country', 'county','city','district']
+        fieldnames = ['uuid', 'addresslv1', 'addresslv2', 'addresslv3', 'addresslv4']
         csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
         csv_writer.writerow(result_entry)
