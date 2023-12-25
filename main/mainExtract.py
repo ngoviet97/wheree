@@ -140,6 +140,8 @@ for row in column_a_data:  # Adjust 'k' as needed
                 pass
 
         country, county, city, district = reverseLocations().reverse(latitude=latitude, longitude=longitude)
+        if county == city:
+            county = ''
 
         ###Categories the brand by chatGPT API 3.5:
         categories = catedf['category'].tolist()
