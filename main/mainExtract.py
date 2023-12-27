@@ -10,16 +10,34 @@ import uuid
 from geoAPI import reverseLocations
 from gptContent import gptContent
 import string
+from collections import Counter
+from bs4 import BeautifulSoup
+
+def remove_punctuation(input_string):
+    punctuation = ['.']
+    for punc in punctuation:
+        # Use translate to remove punctuation
+        input_string = input_string.replace(punc,"")
+
+    return input_string
 
 chrome_options = webdriver.ChromeOptions()
-def remove_punctuation(input_string):
-    # Create a translation table
+def removePunc(input_string):
     translator = str.maketrans('', '', string.punctuation)
-
-    # Use translate to remove punctuation
     result_string = input_string.translate(translator)
-
     return result_string
+
+def convertWords(string):
+    exclude = {'the', 'was', 'is', 'are', 'and', 'you', 'our', 'they', 'us', 'in', 'on', 'at', 'we', 'a', 'an', 'but',
+               'be', 'of', 'when', 'were', 'with', 'i', 'to', 'so', 'not', 'did', 'had', 'off', 'no', 'this', 'for',
+               'me', 'what', 'it','breakfast','very','if','have','good','nice','that','there','its','...','just','one','my','lot','also','as','from','would'}
+
+    word_list = [word.lower() for word in removePunc(string).split() if word.lower() not in exclude]
+    # Count occurrences of each word
+    word_counts = Counter(word_list)
+    # Find the top 5 most common words
+    most_common_words = word_counts.most_common(10)
+    return most_common_words
 
 results = []
 subfile = '~/main/catesub.csv'
@@ -142,20 +160,42 @@ for row in column_a_data:  # Adjust 'k' as needed
         country, county, city, district = reverseLocations().reverse(latitude=latitude, longitude=longitude)
 
         ###Categories the brand by chatGPT API 3.5:
+        soup = BeautifulSoup(driver.page_source, 'html.parser')
+        try:
+            div_element = soup.find('div', class_='m6QErb WNBkOb', role='main')
+            categoryGg = div_element.get_text(strip=True)
+        except:
+            categoryGg = None
+        ###Categories the brand by chatGPT API 3.5:
+        reviews = row[1]
+        driver.get(row)
         categories = catedf['category'].tolist()
         i = 0
+        wordsKey = convertWords(str(reviews))
+
         while i < 2:
-            prompt = f'I have a list of categories: {categories}. Read those reviews below from their customer then choose the most appropriate category for me: {reviews[0:1500]}. Returns result in a format string: "category" '
+            if categoryGg != '':
+                prompt = f'Based on the recommended category from Google: {categoryGg}  then choose the most appropriate category from {categories}. Returns result in a format string: "category" '
+            else:
+                prompt = f'Based on the URL of the brand: {row[0]} and those keywords {wordsKey} then choose the most appropriate category from {categories}. Returns result in a format string: "category" '
+
             result = gptContent().command(prompt)
-            category = re.search(r'"([^"]*)"', result).group(1)
-            category = remove_punctuation(category)
+            try:
+                category = re.search(r'"([^"]*)"', result).group(1)
+                category = remove_punctuation(category)
+            except:
+                category = result
+                pass
+
             if any(cate == category for cate in categories):
                 break
             else:
+                category = ''
                 i += 1
 
         i = 0
         while i < 2:
+
             subcate_List = subdf.loc[subdf['category'] == category, 'sub_category'].unique().tolist()
             prompt = f'Read the reviews:  {reviews[0:2000]}. Choose no more than 3 and at least 2 and most exactly, appropriate subcategories from the {subcate_List}. ONLY TAKE SUBCATEGORIES FROM THE LIST. Returns result in a format list "subcate1","subcate2","subcate3" '
             resultSub = gptContent().command(prompt)
