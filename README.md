@@ -76,20 +76,34 @@ They offer 50.000 requests for free every months on Reverse Geocoding Api Packag
 <img width="1000" alt="Screenshot 2023-12-20 at 11 08 00" src="https://github.com/ngoviet97/wheree/assets/46282671/ee8a826d-21ad-4f3d-9033-f3d2681e59f4">
 
 ## Installation:
-****1. Data transaction flows:
-![Screenshot 2023-12-20 at 14 50 44](https://github.com/ngoviet97/wheree/assets/46282671/18ffe94a-d9bb-4619-a2ab-ceb8b04f4c7d)
+Overall, the goals of the library is to scrapt and extract data from Google Maps URL, then formating the extracted paramaters into raw datasets. After that, proceeding with the raw datasets and returning results as formatted databases. It's essential to evaluate the results before executing any processes. 
 
-Before executing, URLs filtered by rating and number of reviews. Then, if the URL is qualified, extract chosen data type to create a main data file:
+<img width="606" alt="Screenshot 2024-05-20 at 11 13 30" src="https://github.com/ngoviet97/wheree/assets/46282671/4083bda8-6774-4f66-ad14-6f81f3855137">
+
+The raw datasets contains:
+- Main Dataset: Basic information about a brand. 
+- Review Dataset: Reviews related to the brand. 
+- Image Dataset: Images associated with the brand.
+
+
+****1. Data transaction flows:
+
+<img width="622" alt="Screenshot 2024-05-20 at 10 02 05" src="https://github.com/ngoviet97/wheree/assets/46282671/b254159a-aa38-4baa-80ba-0db7882d3c9b">
+
+**CONDITION 1:** **The CONDITION ONE** consists of 2 attributes which defined as _integers_ and must be _larger than 0_:
+- Rating (int)
+- Number of reviews (int)
+
+If the URL is **qualified**, extract chosen data type to create a raw data file including:
 - uuid: ID of the brand
 - name: Brand name
-- phonecode: mobile country code (first 2 numbers of a phone number)
-- phone: the phone number
-- status: Opening status
+- phonecode: Mobile phone
+- hour: Opening hours
 - embled_url: embled url for the map
 - address: Address of the brand
-- price_lv: price level
-- brand_type: type of the brand
-- map_url: the Google Map's URL of the brand
+- price_lv: Price level
+- brand_type: Type of the brand
+- map_url: Google Map's URL of the brand
 
 From the map_url, extract Latitude and Longitude of the brand as format: xx.xxxxxxx,xx.xxxxxxx
 - latitude: a coordinate that specifies the north–south position
