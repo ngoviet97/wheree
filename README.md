@@ -86,6 +86,12 @@ The raw datasets contains:
 - Image Dataset: Images associated with the brand.
 
 
+| Tables | uuid  |name  |phonecode  |hour  |embled_url  |address  |price_lv  |brand_type  |map_url  | reviews | image|
+| ------------- | -----:| ----:| ---------:| ----:| ----------:| -------:| --------:| ----------:| -------:| -------:| -----:|
+| main_dataset  |  ✅    |✅    |✅         |✅    |✅         |✅       |✅       |✅           |✅       |✅      |✅
+| review_dataset|  ✅    |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |✅ |❌ |
+| image_dataset |  ✅   |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |❌ |✅  |
+
 ****1. Data transaction flows:
 
 <img width="622" alt="Screenshot 2024-05-20 at 10 02 05" src="https://github.com/ngoviet97/wheree/assets/46282671/b254159a-aa38-4baa-80ba-0db7882d3c9b">
