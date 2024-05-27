@@ -78,13 +78,13 @@ The raw datasets contains:
 <img width="614" alt="Screenshot 2024-05-27 at 09 06 37" src="https://github.com/ngoviet97/wheree/assets/46282671/fd1bf8d3-20be-42af-b160-a8c35d85c69a">
 
 
-| datasets | uuid  |brand_name  |phone  |hour  |embled_url  |address  |price_lv  |brand_type  |map_url  | reviews | image|booking_url
-| ------------- | -----:| ----:| ---------:| ----:| ----------:| -------:| --------:| ----------:| -------:| -------:| -----:| -----:
-| main_dataset  |  ✅    |✅    |✅         |❌     |✅         |✅       |✅       |✅           |✅       |❌      |❌|❌
-| review_dataset|  ✅    |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |✅ |❌ |❌  
-| image_dataset |  ✅   |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |❌ |✅  |❌  
-| link_dataset |  ✅   |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |❌ |❌  |✅  
-| hour_dataset |  ✅   |❌  |❌ |✅  |❌ |❌ |❌ |❌ |❌ |❌ |❌  |❌  
+| datasets | uuid  |brand_name  |phone  |hour  |embled_url  |address  |price_lv  |brand_type  |map_url  | reviews | image|booking_url| latitude|longitude
+| ------------- | -----:| ----:| ---------:| ----:| ----------:| -------:| --------:| ----------:| -------:| -------:| -----:| -----:| -----:| -----:
+| main_dataset  |  ✅    |✅    |✅         |❌     |✅         |✅       |✅       |✅           |✅       |❌      |❌|❌|✅|✅
+| review_dataset|  ✅    |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |✅ |❌ |❌  |❌|❌
+| image_dataset |  ✅   |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |❌ |✅  |❌  |❌|❌
+| link_dataset |  ✅   |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |❌ |❌  |✅  |❌|❌
+| hour_dataset |  ✅   |❌  |❌ |✅  |❌ |❌ |❌ |❌ |❌ |❌ |❌  |❌  |❌|❌
 
 ****1. Data transaction flows:
 
