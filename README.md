@@ -78,7 +78,7 @@ They offer 50.000 requests for free every months on Reverse Geocoding Api Packag
 ## Installation:
 Overall, the goals of the library is to scrapt and extract data from Google Maps URL, then formating the extracted paramaters into raw datasets. After that, proceeding with the raw datasets and returning results as formatted databases. It's essential to evaluate the results before executing any processes. 
 
-<img width="606" alt="Screenshot 2024-05-20 at 11 13 30" src="https://github.com/ngoviet97/wheree/assets/46282671/4083bda8-6774-4f66-ad14-6f81f3855137">
+<img width="577" alt="Screenshot 2024-05-27 at 08 16 07" src="https://github.com/ngoviet97/wheree/assets/46282671/4826a67d-d2f8-48cd-84a5-5beff4602bdd">
 
 The raw datasets contains:
 - Main Dataset: Basic information about a brand. 
@@ -86,11 +86,12 @@ The raw datasets contains:
 - Image Dataset: Images associated with the brand.
 
 
-| Tables | uuid  |name  |phonecode  |hour  |embled_url  |address  |price_lv  |brand_type  |map_url  | reviews | image|
-| ------------- | -----:| ----:| ---------:| ----:| ----------:| -------:| --------:| ----------:| -------:| -------:| -----:|
-| main_dataset  |  ✅    |✅    |✅         |✅    |✅         |✅       |✅       |✅           |✅       |✅      |✅
-| review_dataset|  ✅    |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |✅ |❌ |
-| image_dataset |  ✅   |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |❌ |✅  |
+| Tables | uuid  |name  |phonecode  |hour  |embled_url  |address  |price_lv  |brand_type  |map_url  | reviews | image|booking_url
+| ------------- | -----:| ----:| ---------:| ----:| ----------:| -------:| --------:| ----------:| -------:| -------:| -----:| -----:
+| main_dataset  |  ✅    |✅    |✅         |✅    |✅         |✅       |✅       |✅           |✅       |✅      |✅|✅
+| review_dataset|  ✅    |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |✅ |❌ |❌  
+| image_dataset |  ✅   |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |❌ |❌  |❌  
+| image_dataset |  ✅   |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |❌ |❌  |✅  
 
 ****1. Data transaction flows:
 
