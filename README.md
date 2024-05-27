@@ -86,12 +86,13 @@ The raw datasets contains:
 - Image Dataset: Images associated with the brand.
 
 
-| Tables | uuid  |name  |phonecode  |hour  |embled_url  |address  |price_lv  |brand_type  |map_url  | reviews | image|booking_url
+| Tables | uuid  |brand_name  |phone  |hour  |embled_url  |address  |price_lv  |brand_type  |map_url  | reviews | image|booking_url
 | ------------- | -----:| ----:| ---------:| ----:| ----------:| -------:| --------:| ----------:| -------:| -------:| -----:| -----:
-| main_dataset  |  ✅    |✅    |✅         |✅    |✅         |✅       |✅       |✅           |✅       |✅      |✅|✅
+| main_dataset  |  ✅    |✅    |✅         |✅    |✅         |✅       |✅       |✅           |✅       |❌      |❌|❌
 | review_dataset|  ✅    |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |✅ |❌ |❌  
-| image_dataset |  ✅   |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |❌ |❌  |❌  
-| image_dataset |  ✅   |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |❌ |❌  |✅  
+| image_dataset |  ✅   |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |❌ |✅  |❌  
+| link_dataset |  ✅   |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |❌ |❌  |✅  
+| link_dataset |  ✅   |❌  |❌ |✅  |❌ |❌ |❌ |❌ |❌ |❌ |❌  |❌  
 
 ****1. Data transaction flows:
 
