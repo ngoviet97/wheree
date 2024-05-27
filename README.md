@@ -31,7 +31,6 @@ pip install Pillow
 pip install uuid
 ````
 
-
 - [csv](https://docs.python.org/3/library/csv.html): The csv module implements classes to read and write tabular data in CSV format
 ````
 pip install python-csv
@@ -66,14 +65,6 @@ Here is language models and price you should consider before running: https://op
 pip install openapi
 ````
 
-
-**Besides, you must notice some of api solutions below:
-**
-
-- https://www.bigdatacloud.com/reverse-geocoding: Transform latitude/longitude coordinates into precise locations using BigDataCloud's cutting-edge Reverse Geocoding API. Discover the world's quickest 'Reverse Geocoding to City' service, now with a generous FREE tier. Dive into unparalleled accuracy and comprehensive global coverage, only at BigDataCloud.
-Head to: https://www.bigdatacloud.com/account to find your API KEY.
-They offer 50.000 requests for free every months on Reverse Geocoding Api Package.
-<img width="1000" alt="Screenshot 2023-12-20 at 11 08 00" src="https://github.com/ngoviet97/wheree/assets/46282671/ee8a826d-21ad-4f3d-9033-f3d2681e59f4">
 
 ## Installation:
 Overall, the goals of the library is to scrapt and extract data from Google Maps URL, then formating the extracted paramaters into raw datasets. After that, proceeding with the raw datasets and returning results as formatted databases. It's essential to evaluate the results before executing any processes. 
