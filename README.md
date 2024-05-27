@@ -69,15 +69,16 @@ pip install openapi
 ## Installation:
 Overall, the goals of the library is to scrapt and extract data from Google Maps URL, then formating the extracted paramaters into raw datasets. After that, proceeding with the raw datasets and returning results as formatted databases. It's essential to evaluate the results before executing any processes. 
 
-<img width="577" alt="Screenshot 2024-05-27 at 08 16 07" src="https://github.com/ngoviet97/wheree/assets/46282671/4826a67d-d2f8-48cd-84a5-5beff4602bdd">
 
 The raw datasets contains:
 - Main Dataset: Basic information about a brand. 
 - Review Dataset: Reviews related to the brand. 
 - Image Dataset: Images associated with the brand.
 
+<img width="614" alt="Screenshot 2024-05-27 at 09 06 37" src="https://github.com/ngoviet97/wheree/assets/46282671/fd1bf8d3-20be-42af-b160-a8c35d85c69a">
 
-| Tables | uuid  |brand_name  |phone  |hour  |embled_url  |address  |price_lv  |brand_type  |map_url  | reviews | image|booking_url
+
+| datasets | uuid  |brand_name  |phone  |hour  |embled_url  |address  |price_lv  |brand_type  |map_url  | reviews | image|booking_url
 | ------------- | -----:| ----:| ---------:| ----:| ----------:| -------:| --------:| ----------:| -------:| -------:| -----:| -----:
 | main_dataset  |  ✅    |✅    |✅         |❌     |✅         |✅       |✅       |✅           |✅       |❌      |❌|❌
 | review_dataset|  ✅    |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |✅ |❌ |❌  
