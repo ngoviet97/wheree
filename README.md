@@ -78,6 +78,18 @@ The raw datasets contains:
 <img width="614" alt="Screenshot 2024-05-27 at 09 06 37" src="https://github.com/ngoviet97/wheree/assets/46282671/fd1bf8d3-20be-42af-b160-a8c35d85c69a">
 
 
+| datasets_raw | uuid  |brand_name  |phone  |hour  |embled_url  |address  |price_lv  |brand_type  |map_url  | reviews | image|booking_url| latitude|longitude
+| ------------- | -----:| ----:| ---------:| ----:| ----------:| -------:| --------:| ----------:| -------:| -------:| -----:| -----:| -----:| -----:
+| main_dataraw  |  ✅    |✅    |✅         |❌     |✅         |✅       |✅       |✅           |✅       |❌      |❌|❌|✅|✅
+| review_dataraw|  ✅    |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |✅ |❌ |❌  |❌|❌
+| image_dataraw |  ✅   |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |❌ |✅  |❌  |❌|❌
+| link_dataraw |  ✅   |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |❌ |❌  |✅  |❌|❌
+| hour_dataraw |  ✅   |❌  |❌ |✅  |❌ |❌ |❌ |❌ |❌ |❌ |❌  |❌  |❌|❌
+
+****1. PROCESSING:
+
+<img width="573" alt="Screenshot 2024-05-29 at 15 04 13" src="https://github.com/ngoviet97/wheree/assets/46282671/baa808b9-c9aa-49f0-a057-a58c6795ae62">
+
 | datasets | uuid  |brand_name  |phone  |hour  |embled_url  |address  |price_lv  |brand_type  |map_url  | reviews | image|booking_url| latitude|longitude
 | ------------- | -----:| ----:| ---------:| ----:| ----------:| -------:| --------:| ----------:| -------:| -------:| -----:| -----:| -----:| -----:
 | main_dataset  |  ✅    |✅    |✅         |❌     |✅         |✅       |✅       |✅           |✅       |❌      |❌|❌|✅|✅
@@ -85,10 +97,9 @@ The raw datasets contains:
 | image_dataset |  ✅   |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |❌ |✅  |❌  |❌|❌
 | link_dataset |  ✅   |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |❌ |❌  |✅  |❌|❌
 | hour_dataset |  ✅   |❌  |❌ |✅  |❌ |❌ |❌ |❌ |❌ |❌ |❌  |❌  |❌|❌
+| features_dataset |  ✅   |❌  |❌ |✅  |❌ |❌ |❌ |❌ |❌ |❌ |❌  |❌  |❌|❌
+| content_dataset |  ✅   |❌  |❌ |✅  |❌ |❌ |❌ |❌ |❌ |❌ |❌  |❌  |❌|❌
 
-****1. Data transaction flows:
-
-<img width="622" alt="Screenshot 2024-05-20 at 10 02 05" src="https://github.com/ngoviet97/wheree/assets/46282671/b254159a-aa38-4baa-80ba-0db7882d3c9b">
 
 **CONDITION 1:** **The CONDITION ONE** consists of 2 attributes which defined as _integers_ and must be _larger than 0_:
 - Rating (int)
