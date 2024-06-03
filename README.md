@@ -69,7 +69,7 @@ pip install openapi
 ## Summary:
 Overall, the goals of the library is to scrapt and extract data from Google Maps URL, then formating the extracted paramaters into raw datasets. After that, proceeding with the raw datasets and returning results as formatted databases. It's essential to evaluate the results before executing any processes. 
 
-<img width="648" alt="Screenshot 2024-06-03 at 08 28 00" src="https://github.com/ngoviet97/wheree/assets/46282671/b67d5343-a8f1-44ef-a9cf-e286925f3be1">
+<img width="851" alt="Screenshot 2024-06-03 at 08 51 17" src="https://github.com/ngoviet97/wheree/assets/46282671/781fd7df-9ef0-47e9-9211-f6e7c302a24d">
 
 
 | datasets_raw | uuid  |brand_name  |phone  |hour  |embled_url  |address  |price_lv  |brand_type  |map_url  | reviews | image|booking_url| latitude|longitude|feature
