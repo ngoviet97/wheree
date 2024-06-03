@@ -2,7 +2,7 @@
 
 wheSCA is a approriate library which provides developers ability to scrape raw data from multiple sources and make it structured in DBMS. 
 
-## Before Start:
+## Installation:
 
 Those tools are required to run, you must install it by pip3 on terminal. You must update for the latest version!!
 For most of the tool, you should read the documentations first at the link.
@@ -66,27 +66,22 @@ pip install openapi
 ````
 
 
-## Installation:
+## Summary:
 Overall, the goals of the library is to scrapt and extract data from Google Maps URL, then formating the extracted paramaters into raw datasets. After that, proceeding with the raw datasets and returning results as formatted databases. It's essential to evaluate the results before executing any processes. 
 
-
-The raw datasets contains:
-- Main Dataset: Basic information about a brand. 
-- Review Dataset: Reviews related to the brand. 
-- Image Dataset: Images associated with the brand.
-
-<img width="614" alt="Screenshot 2024-05-27 at 09 06 37" src="https://github.com/ngoviet97/wheree/assets/46282671/fd1bf8d3-20be-42af-b160-a8c35d85c69a">
+<img width="648" alt="Screenshot 2024-06-03 at 08 28 00" src="https://github.com/ngoviet97/wheree/assets/46282671/b67d5343-a8f1-44ef-a9cf-e286925f3be1">
 
 
-| datasets_raw | uuid  |brand_name  |phone  |hour  |embled_url  |address  |price_lv  |brand_type  |map_url  | reviews | image|booking_url| latitude|longitude
-| ------------- | -----:| ----:| ---------:| ----:| ----------:| -------:| --------:| ----------:| -------:| -------:| -----:| -----:| -----:| -----:
-| main_dataraw  |  ✅    |✅    |✅         |❌     |✅         |✅       |✅       |✅           |✅       |❌      |❌|❌|✅|✅
-| review_dataraw|  ✅    |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |✅ |❌ |❌  |❌|❌
-| image_dataraw |  ✅   |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |❌ |✅  |❌  |❌|❌
-| link_dataraw |  ✅   |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |❌ |❌  |✅  |❌|❌
-| hour_dataraw |  ✅   |❌  |❌ |✅  |❌ |❌ |❌ |❌ |❌ |❌ |❌  |❌  |❌|❌
+| datasets_raw | uuid  |brand_name  |phone  |hour  |embled_url  |address  |price_lv  |brand_type  |map_url  | reviews | image|booking_url| latitude|longitude|feature
+| ------------- | -----:| ----:| ---------:| ----:| ----------:| -------:| --------:| ----------:| -------:| -------:| -----:| -----:| -----:| -----:| -----:
+| main_dataraw  |  ✅    |✅    |✅         |❌     |✅         |✅       |✅       |✅           |✅       |❌      |❌|❌|✅|✅|❌
+| review_dataraw|  ✅    |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |✅ |❌ |❌  |❌|❌|❌
+| image_dataraw |  ✅   |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |❌ |✅  |❌  |❌|❌|❌
+| link_dataraw |  ✅   |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |❌ |❌  |✅  |❌|❌|❌
+| hour_dataraw |  ✅   |❌  |❌ |✅  |❌ |❌ |❌ |❌ |❌ |❌ |❌  |❌  |❌|❌|❌
+| feature_dataraw |  ✅   |❌  |❌ |❌  |❌ |❌ |❌ |❌ |❌ |❌ |❌  |❌  |❌|❌|✅
 
-****1. PROCESSING:
+##1. RAW:
 
 <img width="573" alt="Screenshot 2024-05-29 at 15 04 13" src="https://github.com/ngoviet97/wheree/assets/46282671/baa808b9-c9aa-49f0-a057-a58c6795ae62">
 
