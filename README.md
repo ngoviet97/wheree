@@ -105,7 +105,7 @@ If the URL is **qualified**, extract chosen data type to create a raw data file 
 - name: Brand name
 - phonecode: Mobile phone
 - hour: Opening hours
-- embled_url: embled url for the map
+- embled_url: Embled url for the map
 - address: Address of the brand
 - price_lv: Price level
 - brand_type: Type of the brand
@@ -128,5 +128,9 @@ From the map_url, extract Latitude and Longitude of the brand as format: xx.xxxx
 - menuimgs: In case of restaurant, menu images is required.
 
 ## License:
+
+##1. PROCESSING:
+###1.1: Location Levels -
+![Screenshot 2024-06-21 at 10 29 46](https://github.com/ngoviet97/wheree/assets/46282671/dbc1fa8e-46d3-4299-8569-0cc1a9e2b633)
 
 wheSCA is licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0.
